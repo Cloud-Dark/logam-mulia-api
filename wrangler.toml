@@ -3,7 +3,7 @@
 # an Edge-compatible runtime or using a specialized adapter. Use this file only if you intend to try deploying here.
 
 name = "logam-mulia-api"
-account_id = "<YOUR_ACCOUNT_ID>" # replace with your Cloudflare account ID
+account_id = "101811f1054ae97fd247e2fb7af31c07" # replaced with Cloudflare build account_id
 compatibility_date = "2026-02-04"
 workers_dev = false
 route = "" # optional: e.g. "example.com/*"
