@@ -1,0 +1,23 @@
+# Placeholder Wrangler configuration for Cloudflare Workers
+# NOTE: This repository is a Node/Nest app and may NOT be compatible with Cloudflare Workers without porting to
+# an Edge-compatible runtime or using a specialized adapter. Use this file only if you intend to try deploying here.
+
+name = "logam-mulia-api"
+account_id = "<YOUR_ACCOUNT_ID>" # replace with your Cloudflare account ID
+compatibility_date = "2026-02-04"
+workers_dev = false
+route = "" # optional: e.g. "example.com/*"
+zone_id = "" # optional: the zone id for your domain
+main = "dist/src/main.js" # adjust if your build outputs elsewhere
+type = "javascript"
+
+[build]
+  command = "npm run build"
+  # upload.format can be 'service-worker' or 'modules' depending on your setup
+  upload = { format = "service-worker" }
+
+# To publish (after replacing placeholders and ensuring compatibility):
+# 1. npm i -g wrangler
+# 2. wrangler login (or configure API token)
+# 3. npm run build
+# 4. wrangler publish
