@@ -625,11 +625,25 @@ export class CrawlerService {
 
     if (this.isModeAwsLambda) {
       this.engine = "playwright-aws-lambda";
-      this.playwright = require("playwright-aws-lambda");
+      try {
+        this.playwright = require("playwright-aws-lambda");
+      } catch (err) {
+        this.playwright = null;
+      }
+      if (!this.playwright) {
+        throw new Error('Playwright (aws-lambda) is not available at runtime.');
+      }
       this.browser = await this.playwright.launchChromium();
     } else {
       this.engine = "playwright";
-      this.playwright = require("playwright");
+      try {
+        this.playwright = require("playwright");
+      } catch (err) {
+        this.playwright = null;
+      }
+      if (!this.playwright) {
+        throw new Error('Playwright is not available at runtime.');
+      }
 
       this.browser = await this.playwright?.chromium.launch({
         headless: true,
