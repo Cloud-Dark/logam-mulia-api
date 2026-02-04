@@ -6,7 +6,7 @@ name = "logam-mulia-api"
 account_id = "101811f1054ae97fd247e2fb7af31c07" # replaced with Cloudflare build account_id
 compatibility_date = "2026-02-04"
 compatibility_flags = ["nodejs_compat"]
-workers_dev = false
+workers_dev = true
 main = "./worker.mjs" # minimal ESM worker entrypoint (worker-mode)
 
 [build]
