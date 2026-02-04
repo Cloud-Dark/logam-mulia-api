@@ -5,16 +5,12 @@
 name = "logam-mulia-api"
 account_id = "101811f1054ae97fd247e2fb7af31c07" # replaced with Cloudflare build account_id
 compatibility_date = "2026-02-04"
+compatibility_flags = ["nodejs_compat"]
 workers_dev = false
-route = "" # optional: e.g. "example.com/*"
-zone_id = "" # optional: the zone id for your domain
 main = "dist/src/main.js" # adjust if your build outputs elsewhere
-type = "javascript"
 
 [build]
   command = "npm run build"
-  # upload.format can be 'service-worker' or 'modules' depending on your setup
-  upload = { format = "service-worker" }
 
 # To publish (after replacing placeholders and ensuring compatibility):
 # 1. npm i -g wrangler
