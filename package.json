@@ -24,6 +24,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@fastify/swagger": "^9.6.1",
+    "@fastify/swagger-ui": "^5.2.5",
     "@hapi/joi": "^17.1.1",
     "@nestjs/axios": "^0.1.0",
     "@nestjs/common": "^9.0.0",
@@ -31,6 +33,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-fastify": "^9.0.11",
+    "@nestjs/swagger": "^6.2.0",
     "@nestjs/typeorm": "^9.0.1",
     "@types/hapi__joi": "^17.1.8",
     "cheerio": "^1.0.0-rc.12",
@@ -48,10 +51,7 @@
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
     "typeorm": "^0.3.22",
-    "user-agents": "^1.1.503",
-    "@nestjs/swagger": "^6.2.0",
-    "@fastify/swagger": "^11.0.0",
-    "@fastify/swagger-ui": "^5.0.0"
+    "user-agents": "^1.1.503"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
@@ -93,5 +93,6 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
